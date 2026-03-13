@@ -36,7 +36,7 @@ const vessels = [
     tagline: "The Fishing Yacht",
     description:
       "Our newest addition brings yacht-level luxury to the fishing charter experience. Perfect for impressing clients or hosting executive retreats.",
-    image: "/images/fleet-both-boats.png",
+    image: "/images/celtic-grace.jpg",
     specs: [
       { icon: Ruler, label: "Length", value: "80 ft" },
       { icon: Users, label: "Capacity", value: "110 Guests" },
