@@ -20,7 +20,7 @@ const vessels = [
     image: "/images/hero-rainbow.png",
     specs: [
       { icon: Ruler, label: "Length", value: "70 ft" },
-      { icon: Users, label: "Capacity", value: "120 Guests" },
+      { icon: Users, label: "Capacity", value: "100 Guests" },
       { icon: Thermometer, label: "Cabin", value: "Climate-Controlled" },
       { icon: Sofa, label: "Amenities", value: "Full Service" },
     ],
@@ -39,7 +39,7 @@ const vessels = [
     image: "/images/fleet-both-boats.png",
     specs: [
       { icon: Ruler, label: "Length", value: "80 ft" },
-      { icon: Users, label: "Capacity", value: "129 Guests" },
+      { icon: Users, label: "Capacity", value: "110 Guests" },
       { icon: Waves, label: "Style", value: "Luxury Yacht" },
       { icon: Sofa, label: "Interior", value: "Premium Cabin" },
     ],
