@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     }
 
     await resend.emails.send({
-      from: "Celtic Quest Corporate <onboarding@resend.dev>",
+      from: "Celtic Quest Corporate <charters@cqfleet.com>",
       to: ["Office@CQFleet.com"],
       replyTo: email,
       subject: `Corporate Charter Inquiry from ${name}${company ? ` - ${company}` : ""}`,
