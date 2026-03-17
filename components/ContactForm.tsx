@@ -35,14 +35,25 @@ export default function ContactForm() {
     reset,
   } = useForm<FormData>();
 
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log("Form submitted:", data);
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    reset();
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Failed to send");
+      setIsSubmitted(true);
+      reset();
+    } catch {
+      setSubmitError("Something went wrong. Please call us at (631) 928-3926.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -300,6 +311,10 @@ export default function ContactForm() {
                     />
                   </div>
                 </div>
+
+                {submitError && (
+                  <p className="mt-4 text-red-400 text-center">{submitError}</p>
+                )}
 
                 {/* Submit Button */}
                 <button
